@@ -1,0 +1,111 @@
+.questions {
+  background-color: $off-white;
+  border-left: 5px solid $blue;
+  width: 80%;
+  margin: $lg auto 0 auto;
+  padding: $sm $md;
+  h2 {
+    text-align: center;
+    font-weight: lighter;
+  }
+  .lifeline-icon {
+    color: green;
+    cursor: pointer;
+  }
+  .lifeline-icon:hover {
+    color: darken($color: orange, $amount: 10);
+    background: none;
+  }
+  .lifeline-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lifeline {
+    position: relative;
+    top: -3px;
+  }
+  h5 {
+    font-size: 1.2rem;
+    margin-bottom: $lg;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .options-container {
+    display: inline-block;
+    width: 50%;
+  }
+  .option {
+    background-color: $blue;
+    border-radius: $button-radius;
+    color: white;
+    cursor: pointer;
+    margin: $md auto;
+    padding: $normal;
+    transition: 0.3s linear all;
+    text-align: center;
+    width: 90%;
+  }
+  .option:hover {
+    transform: scale(1.05);
+    background-color: darken($blue, 20%);
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto $sm auto;
+  padding: $md;
+  width: 80%;
+  
+  button {
+    border: none;
+    border-radius: 10px;
+    color: $off-white;
+    cursor: pointer;
+    font-family: $quicksand;
+    margin-right: $md;
+    padding: $xs $sm;
+  }
+  button:first-child {
+    background-color: darken($blue, 10%);
+    transition: 0.2 linear all;
+  }
+  button:first-child:hover {
+    transform: scale(1.05);
+    background-color: darken($blue, 20%);
+  }
+  button:nth-child(2) {
+    background-color: darken($green, 0%);
+    transition: 0.2 linear all;
+  }
+  button:nth-child(2):hover {
+    transform: scale(1.05);
+    background-color: darken($green, 10%);
+  }
+  button:nth-child(3) {
+    background-color: darken(red, 0%);
+    transition: 0.2 linear all;
+  }
+  button:nth-child(3):hover {
+    transform: scale(1.05);
+    background-color: darken(red, 20%);
+  }
+  button:last-child {
+    
+    background-color: darken($blue, 40%);
+    transition: 0.2 linear all;
+  }
+  button:last-child:hover {
+    transform: scale(1.05);
+    
+    background-color: darken($blue, 80%);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 648px){
+  .button-container{
+    flex-direction: column;
+  }
+  .button{
+    margin-bottom: 7px;
+  }
+}
