@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import M from "materialize-css";
 import { useNavigate } from "react-router-dom";
 
+
 const QuestionDisplay = (props) => {
 
   //variables and state initialisation
@@ -20,6 +21,33 @@ const QuestionDisplay = (props) => {
     options.forEach((option) => {
       option.style.visibility = "visible";
     });
+  };
+
+  //handling back option
+
+  window.onbeforeunload =()=>{
+    if(window.location.pathname==='/play'){
+      if (
+        window.confirm(
+          "Are you sure you want to go back? All the progress will be lost."
+        )){
+          showOptions();
+          navigate("/");
+          props.questionsprop.quitQuiz();
+        }
+    }
+  };
+
+  //handling tab switch
+  document.onvisibilitychange = () => {
+    if(window.location.pathname==='/play'){
+      
+      showOptions();
+      //navigate("/");
+      props.questionsprop.endQuizDisplay();
+      alert("You switched tab, hence your quiz has ended.")
+    }
+    
   };
 
   //handling quit option click

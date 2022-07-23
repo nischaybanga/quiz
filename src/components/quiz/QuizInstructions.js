@@ -16,6 +16,9 @@ const QuizInstructions = () => {
         <h1>How to Play the Game</h1>
         <p>Ensure you read this guide from start to finish.</p>
         <ul className="browser-default" id="main-list">
+        <li >
+            Make sure you don't switch tab or minimise window during your quiz, if you do so, your quiz will end immediately.
+          </li>
           <li>
             The game has a duration of 2 minutes and ends as soon as your time
             elapses.
