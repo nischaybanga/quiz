@@ -53,9 +53,9 @@ const QuizSummary = (props) => {
         </div>
         <section>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/play">Play Again</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/">Back to Home</Link>
             </li>
@@ -69,9 +69,9 @@ const QuizSummary = (props) => {
         <section>
           <h1 className="no-stats">No Statistics Available</h1>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/play">Play</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/">Back to Home</Link>
             </li>
