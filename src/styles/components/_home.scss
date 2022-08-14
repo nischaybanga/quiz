@@ -41,6 +41,17 @@
     transform: scale(1.05);
     background-color: darken($color: $green, $amount: 10%);
   }
+  .home-text{
+    font-size: large;
+    font-weight: 600;
+    color: $off-white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .drop-home{
+    background-color: black;
+  }
 }
 @media (max-width: $md-breakpoint) {
   #home {
