@@ -71,7 +71,7 @@ const QuestionDisplay = (props) => {
     if (currentQuestionIndex !== totalNumberOfQuestions - 1) {
       props.questionsprop.nextQuestion();
     } else {
-      navigator.vibrate(500);
+     
       M.toast({
         html: "This is the last question",
         classes: "toast-invalid",
@@ -84,7 +84,7 @@ const QuestionDisplay = (props) => {
     if (currentQuestionIndex !== 0) {
       props.questionsprop.prevQuestion();
     } else {
-      navigator.vibrate(500);
+      
       M.toast({
         html: "This is the first question",
         classes: "toast-invalid",
