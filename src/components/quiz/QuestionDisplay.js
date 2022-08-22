@@ -17,7 +17,7 @@ const QuestionDisplay = (props) => {
   //showing options after lifeline
 
   const showOptions = () => {
-    const options = document.querySelectorAll(".option");
+    const options = document.querySelectorAll(".option");  //select by class, all options have this class
     options.forEach((option) => {
       option.style.visibility = "visible";
     });
@@ -25,18 +25,18 @@ const QuestionDisplay = (props) => {
 
   //handling back option
 
-  window.onbeforeunload =()=>{
-    if(window.location.pathname==='/play'){
-      if (
-        window.confirm(
-          "Are you sure you want to go back? All the progress will be lost."
-        )){
-          showOptions();
-          navigate("/");
-          props.questionsprop.quitQuiz();
-        }
-    }
-  };
+  // window.onbeforeunload =()=>{
+  //   if(window.location.pathname==='/play'){
+  //     if (
+  //       window.confirm(
+  //         "Are you sure you want to go back? All the progress will be lost."
+  //       )){
+  //         showOptions();
+  //         navigate("/");
+  //         props.questionsprop.quitQuiz();
+  //       }
+  //   }
+  // };
 
   //handling tab switch
   document.onvisibilitychange = () => {
@@ -96,6 +96,8 @@ const QuestionDisplay = (props) => {
   //handle hint click
 
   const handleHintClick = (e) => {
+
+    //so that a person doesn't waste hint on already answered question
     if (question.answeredQuestions.includes(currentQuestionIndex)) {
       M.toast({
         html: "Question already answered!",
@@ -117,7 +119,7 @@ const QuestionDisplay = (props) => {
       });
       while (true) {
         const randomNumber = Math.round(Math.random() * 3);
-        console.log(randomNumber);
+        //console.log(randomNumber);
         if (
           randomNumber !== indexOfAnswer &&
           !question.previousRandomNumber.includes(randomNumber)
